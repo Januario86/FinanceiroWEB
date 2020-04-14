@@ -1,5 +1,5 @@
 #Aplicação Financeira Pessoal Web
 
 
-[x] Estrutura Ambiente para criação aplicação
-[ ] 
+-[x] Estrutura Ambiente para criação aplicação
+-[ ] 
