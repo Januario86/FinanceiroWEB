@@ -1,8 +1,15 @@
 package financeiro.web;
 
+import java.util.Map;
+
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
+@ManagedBean(name="usuarioBean")
+@RequestScoped
 public class UsuarioBean {
 	
 	
@@ -10,6 +17,9 @@ public class UsuarioBean {
 	private String email; 
 	private String senha;
 	private String confirmaSenha;
+	@ManagedProperty(value="#{param}")
+	private Map<String, String> parametros;
+	
 	
 	public String novo() {
 		return "usuario";
@@ -51,6 +61,14 @@ public class UsuarioBean {
 	}
 	public void setConfirmaSenha(String confirmaSenha) {
 		this.confirmaSenha = confirmaSenha;
+	}
+
+	public Map<String, String> getParametros() {
+		return parametros;
+	}
+
+	public void setParametros(Map<String, String> parametros) {
+		this.parametros = parametros;
 	}
 	
 
